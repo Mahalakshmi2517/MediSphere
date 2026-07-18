@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 40px; background: #f4f6f9; }
+        h2 { color: #1e3c72; }
+        a.btn {
+            display: inline-block;
+            padding: 10px 18px;
+            margin: 10px 10px 10px 0;
+            background: #1e3c72;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 8px 16px;
+            background: #e63946;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to Medisphere Dashboard</h2>
+    <a th:href="@{/patients}" class="btn">Patient Management</a>
+    <a th:href="@{/doctors}" class="btn">Doctor Management</a>
+    <a th:href="@{/appointments}" class="btn">Appointment Management</a>
+
+    <form th:action="@{/logout}" method="post" style="margin-top: 20px;">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>

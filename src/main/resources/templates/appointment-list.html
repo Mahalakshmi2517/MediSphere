@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment List</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 40px; background: #f4f6f9; }
+        h2 { color: #1e3c72; }
+        table { width: 100%; border-collapse: collapse; background: #fff; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th { background: #1e3c72; color: #fff; }
+        a.btn { padding: 6px 10px; margin-right: 5px; text-decoration: none; border-radius: 4px; color: #fff; font-size: 13px; }
+        .add-btn { background: #1e3c72; padding: 8px 14px; }
+        .confirm-btn { background: #2a9d8f; }
+        .complete-btn { background: #457b9d; }
+        .cancel-btn { background: #e63946; }
+        .delete-btn { background: #6c757d; }
+        .status { padding: 4px 8px; border-radius: 4px; color: #fff; font-size: 12px; }
+        .PENDING { background: #f4a261; }
+        .CONFIRMED { background: #2a9d8f; }
+        .CANCELLED { background: #e63946; }
+        .COMPLETED { background: #457b9d; }
+    </style>
+</head>
+<body>
+    <h2>Appointment Management</h2>
+    <a th:href="@{/appointments/book}" class="btn add-btn">+ Book Appointment</a>
+    <br><br>
+    <table>
+        <tr>
+            <th>ID</th><th>Patient</th><th>Doctor</th><th>Date</th>
+            <th>Time</th><th>Reason</th><th>Status</th><th>Actions</th>
+        </tr>
+        <tr th:each="appt : ${appointments}">
+            <td th:text="${appt.id}"></td>
+            <td th:text="${appt.patient.name}"></td>
+            <td th:text="${appt.doctor.name}"></td>
+            <td th:text="${appt.appointmentDate}"></td>
+            <td th:text="${appt.appointmentTime}"></td>
+            <td th:text="${appt.reason}"></td>
+            <td><span class="status" th:classappend="${appt.status}" th:text="${appt.status}"></span></td>
+            <td>
+                <a th:href="@{/appointments/updateStatus/{id}/CONFIRMED(id=${appt.id})}" class="btn confirm-btn">Confirm</a>
+                <a th:href="@{/appointments/updateStatus/{id}/COMPLETED(id=${appt.id})}" class="btn complete-btn">Complete</a>
+                <a th:href="@{/appointments/cancel/{id}(id=${appt.id})}" class="btn cancel-btn"
+                   onclick="return confirm('Cancel this appointment?')">Cancel</a>
+                <a th:href="@{/appointments/delete/{id}(id=${appt.id})}" class="btn delete-btn"
+                   onclick="return confirm('Delete permanently?')">Delete</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
