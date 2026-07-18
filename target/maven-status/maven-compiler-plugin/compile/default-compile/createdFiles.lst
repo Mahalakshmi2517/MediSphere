@@ -1,0 +1,6 @@
+com\medisphere\model\Patient.class
+com\medisphere\controller\PatientController.class
+com\medisphere\MedisphereApplication.class
+com\medisphere\service\PatientService.class
+com\medisphere\config\SecurityConfig.class
+com\medisphere\repository\PatientRepository.class

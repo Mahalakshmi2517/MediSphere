@@ -1,0 +1,11 @@
+C:\Users\Mahalakshmi K\medisphere\src\main\java\com\medisphere\config\SecurityConfig.java
+C:\Users\Mahalakshmi K\medisphere\src\main\java\com\medisphere\controller\AuthController.java
+C:\Users\Mahalakshmi K\medisphere\src\main\java\com\medisphere\controller\DoctorController.java
+C:\Users\Mahalakshmi K\medisphere\src\main\java\com\medisphere\controller\PatientController.java
+C:\Users\Mahalakshmi K\medisphere\src\main\java\com\medisphere\MedisphereApplication.java
+C:\Users\Mahalakshmi K\medisphere\src\main\java\com\medisphere\model\Doctor.java
+C:\Users\Mahalakshmi K\medisphere\src\main\java\com\medisphere\model\Patient.java
+C:\Users\Mahalakshmi K\medisphere\src\main\java\com\medisphere\repository\DoctorRepository.java
+C:\Users\Mahalakshmi K\medisphere\src\main\java\com\medisphere\repository\PatientRepository.java
+C:\Users\Mahalakshmi K\medisphere\src\main\java\com\medisphere\service\DoctorService.java
+C:\Users\Mahalakshmi K\medisphere\src\main\java\com\medisphere\service\PatientService.java
